@@ -1,7 +1,7 @@
 # microservices
 
 This is an example of microservices with Spring Cloud and Netflix OSS.
-Each microservice is developed as standalone Spring Boot application.
+Each microservice is developed as standalone Spring Boot application using Gradle.
 
 The project contains the following structure:
 
