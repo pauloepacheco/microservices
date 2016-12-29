@@ -1,13 +1,20 @@
 package br.com.tms.microservices.core.recomendation.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * 
  * @author Paulo Pacheco
  *
  */
+
+@Document(collection="recommendations")
 public class Recommendation {
-    private int productId;
-    private int recommendationId;
+	
+	@Id
+	private int recommendationId;
+    private int productId;    
     private String author;
     private int rate;
     private String content;
@@ -62,4 +69,12 @@ public class Recommendation {
     public void setContent(String content) {
         this.content = content;
     }
+
+	@Override
+	public String toString() {
+		return "Recommendation [recommendationId=" + recommendationId + ", productId=" + productId + ", author="
+				+ author + ", rate=" + rate + ", content=" + content + "]";
+	}
+    
+    
 }

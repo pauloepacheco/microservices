@@ -12,4 +12,5 @@ import br.com.tms.microservices.core.recomendation.model.Recommendation;
 public interface RecomendationService {
 
 	public List<Recommendation> getRecomendations(int productId);
+		
 }
