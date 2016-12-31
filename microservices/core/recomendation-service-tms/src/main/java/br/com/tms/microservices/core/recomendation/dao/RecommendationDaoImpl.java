@@ -19,10 +19,11 @@ public class RecommendationDaoImpl extends MongoTemplateDao implements Recommend
 
 	@Override
 	public List<Recommendation> getRecommendationsByProductId(int productId) {
-		Query query = new Query(Criteria.where("productId").is(productId));		
-		return (List<Recommendation>) mongoTemplateDao.find(query, Recommendation.class);
+		Query query = new Query(Criteria.where("productId").is(productId));
+		List<Recommendation> result = mongoTemplateDao.find(query, Recommendation.class);
+		return result;
 	}
-
+	
 	@Override
 	public void insertRecommendations(int productId) {
 		List<Recommendation> list = new ArrayList<>();

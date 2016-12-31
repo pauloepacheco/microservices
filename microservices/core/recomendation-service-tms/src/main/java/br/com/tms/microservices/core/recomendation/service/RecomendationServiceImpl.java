@@ -27,5 +27,5 @@ public class RecomendationServiceImpl implements RecomendationService {
 			@RequestParam(value = "productId",  required = true) int productId) {
 		
 		return recommendationDao.getRecommendationsByProductId(productId);
-	}
+	}	
 }
