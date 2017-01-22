@@ -35,6 +35,9 @@ publishing {
     }
 }
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 repositories {
     mavenCentral()
     maven {
@@ -42,6 +45,7 @@ repositories {
         url 'http://maven.springframework.org/release'
     }
 }
+
 
 dependencies {
     // TODO: Added ver no on the three core starter deps to make the maven plugin to work
@@ -52,7 +56,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
     compile("org.springframework.cloud:spring-cloud-starter-eureka:1.0.0.RELEASE")
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb:1.2.0.RELEASE'
-    compile("org.springframework.boot:spring-boot-starter-jetty")
+    //compile("org.springframework.boot:spring-boot-starter-jetty")
 	compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.0.0'
     testCompile("junit:junit")    
     testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
