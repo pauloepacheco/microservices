@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.tms.microservices.core.product.model.Product;
+
 /**
  * 
  * @author Paulo Pacheco

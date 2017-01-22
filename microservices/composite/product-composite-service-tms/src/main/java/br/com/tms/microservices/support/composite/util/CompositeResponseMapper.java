@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.ObjectReader;
 
 import br.com.tms.microservices.core.product.model.Product;
 import br.com.tms.microservices.core.recomendation.model.Recommendation;
+import br.com.tms.microservices.support.composite.model.RecommendationSummary;
 
 /**
  * 
