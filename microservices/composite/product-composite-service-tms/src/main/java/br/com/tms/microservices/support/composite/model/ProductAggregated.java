@@ -22,10 +22,11 @@ public class ProductAggregated {
 
     public ProductAggregated(Product product, List<Recommendation> recommendations) {
 
-        this.productId = product.getProductId();
-        this.name = product.getName();
-        this.weight = product.getWeight();
-
+    	if(product != null){
+	        this.productId = product.getProductId();
+	        this.name = product.getName();
+	        this.weight = product.getWeight();
+    	}
         // copy recomendation information if it is available
         if (recommendations != null)
             this.recommendations = recommendations.stream()

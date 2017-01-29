@@ -39,11 +39,14 @@ dependencies {
     }
     compile("org.springframework.boot:spring-boot-starter-undertow")
     compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.cloud:spring-cloud-starter-hystrix:1.0.0.RELEASE")
     compile("org.springframework.cloud:spring-cloud-starter-eureka:1.0.0.RELEASE")
+    compile("org.springframework.cloud:spring-cloud-starter-bus-amqp:1.0.0.RELEASE")
+    compile("org.springframework.cloud:spring-cloud-netflix-hystrix-amqp:1.0.0.RELEASE")
 
+    compile("br.com.tms.microservices.core.product:product-service-tms:0.0.1-SNAPSHOT")
     compile("br.com.tms.microservices.core.recommendation:recommendation-service-tms:0.0.1-SNAPSHOT")
-	compile("br.com.tms.microservices.core.product:product-service-tms:0.0.1-SNAPSHOT")
-	
+
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
