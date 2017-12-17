@@ -1,18 +1,25 @@
-# Microservices
+# Product Recommendation Microservices
 
-This is an example of microservices with <b>Spring Cloud</b> and <b>Netflix OSS</b>. 
-<br/><br/>
-Each microservice is developed as standalone Spring Boot application using Gradle
-<br/>
-The project contains the following structure:
+This is an example of microservices using **Spring Cloud** and **Netflix OSS** stack. 
 
-Two core services responsible for handling information regarding products and recommendations.
-One composite service, product-composite-tms, that can aggregate information from the two core services and compose a view of product information together with recommendations of a product.
-To support the business services we use the following infrastructure services and components:
+Each microservice is developed as standalone Spring Boot application using Gradle for continuous integration.
 
-<b>Netflix Eureka</b> - Used for Service Discovery<br/>
-<b>Netflix Ribbon</b> - Dynamic Routing and Load Balancer<br/>
-<b>Netflix Hystrix</b> - Circuit Breaker<br/>
-<b>Turbine and Hystrix</b> - Monitoring <br/>
-<b>Edge Server (Netflix Zuul)</b> -  It's used for communication to the outside world. Services are registered at runtime, so it is used to call services internally using service discovery.
+This app is intended to compose a view of recommendations of a product.
+
+There are three spring boot apps to support this functionality using the Microservice approach.
+   
+    Two core services responsible for handling information regarding products and its recommendations
+   
+    A composite service, product-composite-tms that is used to compose a view of a product with its recommendations. This module is also used for communication between the infrastructure services and core services to avoid calling the core services directly one by one.
+ 
+Netflix OSS Stack is used to support the infrastructure services and components along with other technologies described below.
+
+| Component            | Description                             |
+| ----------           | ------------------------                |
+| Netflix Eureka       | Service Discovery                       |
+| Netflix Ribbon       | Dynamic Routing and Load Balancer       |
+| Netflix Hystrix      | Circuit Breaker                         |
+| Turbine and Hystrix  | Dashbord for monitoring                 |
+| Netflix Zuul         | Gateway to filter requests from outside |
+| MongoDB              | NoSQL database                          |
  
