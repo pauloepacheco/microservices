@@ -8,9 +8,9 @@ This app is intended to compose a view of recommendations of a product.
 
 There are three spring boot apps to support this functionality using the Microservice approach.
    
-    Two core services responsible for handling information regarding products and its recommendations
+   Two core services responsible for handling information regarding products and its recommendations
    
-    A composite service, product-composite-tms that is used to compose a view of a product with its recommendations. This module is also used for communication between the infrastructure services and core services to avoid calling the core services directly one by one.
+   A composite service, product-composite-tms that is used to compose a view of a product with its recommendations. This module is also used for communication between the infrastructure services and core services to avoid calling the core services directly one by one.
  
 Netflix OSS Stack is used to support the infrastructure services and components along with other technologies described below.
 
